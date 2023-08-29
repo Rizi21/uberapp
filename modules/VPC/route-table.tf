@@ -48,22 +48,22 @@ resource "aws_route" "private_route_02" {
 
 # <<<------------------------ Route table association -------------------------->>>
 
-resource "aws_subnet_route_table_association" "public_subnet_01_association" {
+resource "aws_route_table_association" "public_subnet_01_association" {
   subnet_id      = aws_subnet.public_subnet_01.id
   route_table_id = aws_route_table.public_route_table.id
 }
 
-resource "aws_subnet_route_table_association" "public_subnet_02_association" {
+resource "aws_route_table_association" "public_subnet_02_association" {
   subnet_id      = aws_subnet.public_subnet_02.id
   route_table_id = aws_route_table.public_route_table.id
 }
 
-resource "aws_subnet_route_table_association" "private_subnet_01_association" {
+resource "aws_route_table_association" "private_subnet_01_association" {
   subnet_id      = aws_subnet.private_subnet_01.id
   route_table_id = aws_route_table.private_route_table_01.id
 }
 
-resource "aws_subnet_route_table_association" "private_subnet_02_association" {
+resource "aws_route_table_association" "private_subnet_02_association" {
   subnet_id      = aws_subnet.private_subnet_02.id
   route_table_id = aws_route_table.private_route_table_02.id
 }

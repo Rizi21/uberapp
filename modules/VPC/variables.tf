@@ -2,6 +2,10 @@ variable "vpc_block" {
   default = "192.168.0.0/16"
 }
 
+variable "stack_name" {
+  type = string
+}
+
 variable "public_subnet01_block" {
   default = "192.168.0.0/18"
 }
