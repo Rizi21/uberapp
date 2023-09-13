@@ -1,15 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket = "terraform-state-devopsthehardway-rf"
-    key    = "eks-terraform-workernodes.tfstate"
-    region = "us-east-1"
-  }
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
 
 data "terraform_remote_state" "iam" {
   backend = "s3" # Use the appropriate backend and configuration

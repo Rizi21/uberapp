@@ -7,7 +7,7 @@ spec:
     app: uber-ui
   ports:
   - protocol: "TCP"
-    port: 6000
+    port: 80
     targetPort: 5000
   type: LoadBalancer
 
@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
       - name: uber-ui
-        image: 323040907683.dkr.ecr.us-east-1.amazonaws.com/devopsthehardway-ecr:latest
+        image: 323040907683.dkr.ecr.us-east-1.amazonaws.com/devopsthehardway:latest
         ports:
         - containerPort: 5000
